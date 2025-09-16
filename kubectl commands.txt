@@ -1,0 +1,30 @@
+kubectl config current-context - To check the current Kubernetes context
+
+kubectl  version
+
+kubectl config set-context <context_name> - to change the context
+
+kubectl run nginx --image=nginx:1.27.0 - To Start a nginx pod
+kubectl run <POD_NAME> --image=<IMAGE_NAME>:<IMAGE_TAG>
+
+kubectl get pods - to view all pods
+
+kubectl describe <RESOURCE> <NAME> - With this we can describe any type of a resource in our K8 cluster
+
+E.g.: - kubectl describe pod nginx
+
+kubectl run -it alpine --image=alpine:3.20 sh - getting an interactive shell while creating a pod
+
+Once we have a pod with an interactive shell, we can connect to the other pods using the IP addresses.
+
+kubectl logs nginx 
+
+kubectl logs nginx --container=nginx - this can be used to check logs in multiple containers
+
+kubectl delete pod alpine
+
+kubectl delete -f pod alpine
+
+kubectl expose pod nginx --type=NodePort --port=80 - Once this type of a services is created, we can connect to the container name instead of the ip from another pod.
+
+kubectl get services
