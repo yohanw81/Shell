@@ -1,2 +1,2 @@
 # Shell
-Schell Scripts for git fetch and git pull
+Schell Scripts for git fetch and git pull 0
